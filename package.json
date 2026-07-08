@@ -1,0 +1,12 @@
+{
+  "name": "iowa-poor-bridges",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Iowa chronically-Poor bridges site. Data baked in at build time via Hermai (fhwa.dot.gov NBI proxy).",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
