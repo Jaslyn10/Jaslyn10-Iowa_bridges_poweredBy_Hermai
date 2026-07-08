@@ -28,7 +28,7 @@ if not SITE_URL.endswith("/"):
     SITE_URL += "/"
 API_KEY = os.environ.get("HERMAI_API_KEY", "").strip()
 API_URL = "https://api.hermai.ai/v1/fetch"
-YEARS = list(range(2010, 2026))
+YEARS = [2025]
 
 def log(*a): print("[build]", *a, flush=True)
 
