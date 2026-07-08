@@ -39,8 +39,13 @@ def fetch_year(state_file):
     req = urllib.request.Request(API_URL, data=body, method="POST")
     req.add_header("Authorization", "Bearer " + API_KEY)
     req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req, timeout=120) as r:
-        payload = json.loads(r.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            payload = json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode(errors="replace")
+        log(f"Hermai HTTP {e.code} body: {err_body[:800]}")
+        raise
     if not payload.get("success"):
         raise RuntimeError(f"Hermai returned success=false for {state_file}")
     return payload["data"]
