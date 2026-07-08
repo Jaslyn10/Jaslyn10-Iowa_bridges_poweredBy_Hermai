@@ -37,7 +37,8 @@ def fetch_year(state_file):
     body = json.dumps({"site": "fhwa.dot.gov", "endpoint": "nbi_state_bridges",
                        "params": {"year": "20" + state_file[2:], "state_file": state_file}}).encode()
     req = urllib.request.Request(API_URL, data=body, method="POST")
-    req.add_header("Authorization", "Bearer " + API_KEY)
+    req.add_header("Content-Type", "application/json")
+    req.add_header("x-api-key", API_KEY)
     with urllib.request.urlopen(req, timeout=120) as r:
         payload = json.loads(r.read().decode())
     if not payload.get("success"):
@@ -153,6 +154,7 @@ def merge_news(D):
 
 # ---------- main ----------
 def main():
+    log(f"key loaded: length={len(API_KEY)}, starts_with={API_KEY[:4]!r}, ends_with={API_KEY[-4:]!r}")
     D = None
     if API_KEY:
         try:
