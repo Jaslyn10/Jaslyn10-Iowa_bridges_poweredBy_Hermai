@@ -1,4 +1,5 @@
 {
+  "_README": "Per-bridge news, keyed by NBI structure number (STRUCTURE_NUMBER_008). The build merges these onto the hero + any matching searchable bridge. Add an entry only when you have a real, dated source; leave a bridge out if there's no news. Fields: status, source, domain, url, date (all shown as plain text so they survive a screenshot). Optional: nickname, img (path under img/), img_credit.",
   "3700": {
     "status": "No longer the same bridge: the 113-year-old span was demolished in 2024 and fully replaced. The City of Des Moines' own project page lists the $19.1M replacement as completed in spring 2026, with new bike lanes and wider sidewalks.",
     "source": "City of Des Moines",
@@ -7,7 +8,7 @@
     "date": "Spring 2026 (completed)"
   },
   "6710": {
-    "status": "Replaced. Greene County awarded the replacement contract in July 2024, and the new bridge deck was being poured by the end of March 2025 — this one should come off the chronically-Poor list on the next NBI cycle.",
+    "status": "Replaced. Greene County awarded the replacement contract in July 2024, and the new bridge deck was being poured by the end of March 2025 \u2014 this one should come off the chronically-Poor list on the next NBI cycle.",
     "source": "Greene County News Online",
     "domain": "greenecountynewsonline.com",
     "url": "https://greenecountynewsonline.com/2025/04/02/supervisors-approve-5-year-roads-plan/",
@@ -28,10 +29,11 @@
     "date": "May 2026"
   },
   "31720": {
-    "status": "Iowa City approved an initial concept to replace this 1915 span (the eastbound Burlington Street Bridge); construction is projected to begin around 2029. It was flagged structurally deficient in a 2021 inspection report.",
-    "source": "University of Iowa Facilities Mgmt",
-    "domain": "facilities.uiowa.edu",
-    "url": "https://facilities.uiowa.edu/news/2024/11/iowa-city-takes-first-steps-30-million-burlington-street-bridge-replacement-project",
+    "nickname": "Burlington St Bridge",
+    "status": "Iowa City's council unanimously approved the design concept for replacing this 1915 span (the eastbound Burlington Street Bridge) at its Dec. 9, 2025 meeting; construction is projected to start in spring 2029 at a cost of roughly $70M. A 2021 inspection had listed the bridge as \"poor\" and structurally deficient.",
+    "source": "The Daily Iowan",
+    "domain": "dailyiowan.com",
+    "url": "https://dailyiowan.com/2025/12/09/ic-city-council-fails-review-of-state-legislative-priorities-passes-bridge-design-renovations/",
     "date": "Dec 2025"
   },
   "35410": {
@@ -42,17 +44,18 @@
     "date": "Apr 2026"
   },
   "36750": {
-    "status": "Iowa DOT is proposing a full replacement at this Mapleton junction (longer, wider bridge) and was collecting public feedback as of Feb 2026. Construction isn't expected to start until spring 2028, with completion later that year — so it stays open and posted for a couple more construction seasons yet.",
+    "status": "Iowa DOT is proposing a full replacement at this Mapleton junction (longer, wider bridge) and was collecting public feedback as of Feb 2026. Construction isn't expected to start until spring 2028, with completion later that year \u2014 so it stays open and posted for a couple more construction seasons yet.",
     "source": "KCAU 9",
     "domain": "kcau9.com",
     "url": "https://www.kcau9.com/news/local-news/feedback-wanted-proposed-bridge-replacement-in-monona-county/",
     "date": "Feb 2026"
   },
   "47020": {
-    "status": "Under a joint Iowa DOT / Illinois DOT corridor study. As of May 2026 the two options still on the table would both demolish and replace the 86-year-old bridge; a decision is expected when the study wraps in 2027.",
-    "source": "University of Iowa Facilities Mgmt",
-    "domain": "facilities.uiowa.edu",
-    "url": "https://facilities.uiowa.edu/news/2024/11/iowa-city-takes-first-steps-30-million-burlington-street-bridge-replacement-project",
+    "nickname": "the Centennial Bridge",
+    "status": "Under a joint Iowa DOT / Illinois DOT corridor study. As of May 2026 officials had narrowed the options to two full-replacement alternatives; both would demolish the 86-year-old bridge. A preferred option is expected once the study concludes, likely in 2027, with construction not starting before 2031.",
+    "source": "WVIK \u00b7 Quad Cities NPR",
+    "domain": "wvik.org",
+    "url": "https://www.wvik.org/wvik-top-stories/2026-05-21/public-reviews-two-remaining-options-for-replacing-centennial-bridge",
     "date": "May 2026"
   }
 }
