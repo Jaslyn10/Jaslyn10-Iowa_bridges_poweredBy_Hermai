@@ -37,9 +37,7 @@ def fetch_year(state_file):
     body = json.dumps({"site": "fhwa.dot.gov", "endpoint": "nbi_state_bridges",
                        "params": {"year": "20" + state_file[2:], "state_file": state_file}}).encode()
     req = urllib.request.Request(API_URL, data=body, method="POST")
-    req.add_header("Content-Type", "application/json")
-    # NOTE: confirm the exact auth header in Hermai's docs. Bearer is the common default;
-    # if you get 401/403, switch this to:  req.add_header("x-api-key", API_KEY)
+    req.add_header("x-api-key", API_KEY)
     req.add_header("Authorization", "Bearer " + API_KEY)
     with urllib.request.urlopen(req, timeout=120) as r:
         payload = json.loads(r.read().decode())
