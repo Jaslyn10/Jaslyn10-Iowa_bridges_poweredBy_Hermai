@@ -1,0 +1,51 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]          # rebuild whenever you push
+  workflow_dispatch:          # ...and let you run it by hand from the Actions tab
+  schedule:
+    - cron: "0 6 1 * *"       # optional: auto-refresh on the 1st of each month
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas
+      - name: Build index.html (fetch via Hermai, compute, bake)
+        env:
+          HERMAI_API_KEY: ${{ secrets.HERMAI_API_KEY }}   # the key lives ONLY here
+          SITE_URL: ${{ vars.SITE_URL }}                   # your repo Variable
+        run: python scripts/build.py
+      - name: Assemble the site folder to publish
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp social-preview.png _site/ 2>/dev/null || echo "no social-preview.png (add one for link previews)"
+          if [ -d img ]; then cp -r img _site/; fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
