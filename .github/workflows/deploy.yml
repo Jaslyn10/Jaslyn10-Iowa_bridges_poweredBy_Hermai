@@ -2,8 +2,8 @@ name: Build and deploy
 
 on:
   push:
-    branches: [main]          # rebuild whenever you push
-  workflow_dispatch:          # ...and let you run it by hand from the Actions tab
+    branches: [main]        
+  workflow_dispatch:         
   schedule:
     - cron: "0 6 1 * *"       # optional: auto-refresh on the 1st of each month
 
@@ -27,8 +27,8 @@ jobs:
       - run: pip install pandas
       - name: Build index.html (fetch via Hermai, compute, bake)
         env:
-          HERMAI_API_KEY: ${{ secrets.HERMAI_API_KEY }}   # the key lives ONLY here
-          SITE_URL: ${{ vars.SITE_URL }}                   # your repo Variable
+          HERMAI_API_KEY: ${{ secrets.HERMAI_API_KEY }}  
+          SITE_URL: ${{ vars.SITE_URL }}                   # repo Variable
         run: python scripts/build.py
       - name: Assemble the site folder to publish
         run: |
