@@ -1,14 +1,14 @@
 {
   "_README": "Per-bridge news, keyed by NBI structure number (STRUCTURE_NUMBER_008). The build merges these onto the hero + any matching searchable bridge. Add an entry only when you have a real, dated source; leave a bridge out if there's no news. Fields: status, source, domain, url, date (all shown as plain text so they survive a screenshot). Optional: nickname, img (path under img/), img_credit.",
   "3700": {
-    "status": "No longer the same bridge: the 113-year-old span was demolished in 2024 and fully replaced. The City of Des Moines' own project page lists the $19.1M replacement as completed in spring 2026, with new bike lanes and wider sidewalks.",
-    "source": "City of Des Moines",
-    "domain": "dsm.city",
-    "url": "https://www.dsm.city/Walnut_Street_Bridge_Replacement440.php",
-    "date": "Spring 2026 (completed)"
+    "status": "No longer the same bridge: the 113-year-old Walnut Street span was demolished in 2024 and replaced with a new four-span concrete bridge featuring bike lanes and wider sidewalks. The roughly $19.8M replacement was slated for completion in 2026.",
+    "source": "Business Record",
+    "domain": "businessrecord.com",
+    "url": "https://www.businessrecord.com/demolition-of-walnut-street-bridge-progressing/",
+    "date": "2026"
   },
   "6710": {
-    "status": "Replaced. Greene County awarded the replacement contract in July 2024, and the new bridge deck was being poured by the end of March 2025 \u2014 this one should come off the chronically-Poor list on the next NBI cycle.",
+    "status": "Replaced. Greene County awarded the replacement contract in July 2024, and the new bridge deck was being poured by the end of March 2025 — this one should come off the chronically-Poor list on the next NBI cycle.",
     "source": "Greene County News Online",
     "domain": "greenecountynewsonline.com",
     "url": "https://greenecountynewsonline.com/2025/04/02/supervisors-approve-5-year-roads-plan/",
@@ -44,7 +44,7 @@
     "date": "Apr 2026"
   },
   "36750": {
-    "status": "Iowa DOT is proposing a full replacement at this Mapleton junction (longer, wider bridge) and was collecting public feedback as of Feb 2026. Construction isn't expected to start until spring 2028, with completion later that year \u2014 so it stays open and posted for a couple more construction seasons yet.",
+    "status": "Iowa DOT is proposing a full replacement at this Mapleton junction (longer, wider bridge) and was collecting public feedback as of Feb 2026. Construction isn't expected to start until spring 2028, with completion later that year — so it stays open and posted for a couple more construction seasons yet.",
     "source": "KCAU 9",
     "domain": "kcau9.com",
     "url": "https://www.kcau9.com/news/local-news/feedback-wanted-proposed-bridge-replacement-in-monona-county/",
@@ -53,7 +53,7 @@
   "47020": {
     "nickname": "the Centennial Bridge",
     "status": "Under a joint Iowa DOT / Illinois DOT corridor study. As of May 2026 officials had narrowed the options to two full-replacement alternatives; both would demolish the 86-year-old bridge. A preferred option is expected once the study concludes, likely in 2027, with construction not starting before 2031.",
-    "source": "WVIK \u00b7 Quad Cities NPR",
+    "source": "WVIK · Quad Cities NPR",
     "domain": "wvik.org",
     "url": "https://www.wvik.org/wvik-top-stories/2026-05-21/public-reviews-two-remaining-options-for-replacing-centennial-bridge",
     "date": "May 2026"
