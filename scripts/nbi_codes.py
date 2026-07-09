@@ -1,7 +1,7 @@
 """
 nbi_codes.py  —  Official FHWA National Bridge Inventory (NBI) code lookups.
 
-The raw NBI (from your Excel files OR from the Hermai API) stores CODES, not names.
+The raw NBI stores CODES, not names.
 This module turns those codes into human-readable labels using the federal codebook,
 so the "Agency responsible" value is 100% derived from the data and reproduces
 identically on every rebuild.
